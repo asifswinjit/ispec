@@ -49,7 +49,9 @@ $(document).ready(function() {
     $("#open_project_back_btn").click(function(){
         window.location.href = 'siteprojects.html';
     });
-    
+    $("#download_proj_btn").click(function(){
+        window.location.href = 'siteproject/siteprojects.html';
+    });
     $("#proj_comment_btn").click(function(){
         window.location.href = 'projectcomments.html';
     });
@@ -57,6 +59,23 @@ $(document).ready(function() {
         window.location.href = 'openproject.html';
     });
     
+    $(".got_to_product_info").click(function(){
+        window.location.href = 'product_related.html';
+    });
+    
+    $("#got_to_hw_set").click(function(){
+        window.location.href = 'hwsets.html';
+    });
+    $("#report_proj_btn").click(function(){
+        window.location.href = 'hw_related.html';
+    });
+    $("#hw_info_save_btn").click(function(){
+        window.location.href = 'siteproject/openproject.html';
+    });
+   
+    $("#static_table").click(function(){
+        window.location.href = '../hwsets.html';
+    });
     
     
     /***********Button Page Redirect Events End**********/
