@@ -80,3 +80,31 @@ $(document).ready(function() {
  /****************Table Click Event End  ************ */
  
 } );
+
+$(document).ready(function(){
+    $("#camera").click(function(){
+        $("#file_upload").click()
+    });
+
+    $("#file_upload").change(function() {
+        readURL(this);
+      });
+
+});
+function readURL(input) {
+
+    if (input.files && input.files[0]) {
+       
+      var reader = new FileReader();
+  
+      reader.onload = function(e) {
+        $('#pic_upload').attr('src', e.target.result);
+  
+        $('#pic_upload').hide();
+        $('#pic_upload').fadeIn(650);
+  
+      }
+  
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
