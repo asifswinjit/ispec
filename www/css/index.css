@@ -1,0 +1,246 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#E4E4E4;
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #A7A7A7),
+        color-stop(0.51, #E4E4E4)
+    );
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    text-transform:uppercase;
+    width:100%;
+}
+a, a:hover, a:focus, a:active,
+button, button:hover, button:focus, button:active,
+input, input:hover, input:focus, input:active{
+    outline: none !important;
+}
+/* Portrait layout (default) */
+.app {
+    background:url(../img/bg.jpg) no-repeat center top; /* 170px x 200px */
+    position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    height:50px;                   /* text area height */
+    width:225px;                   /* text area width */
+    text-align:center;
+    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+/*************Custom css from here started********************/
+.bg { 
+    /* The image used */
+    background-image: url("../img/bg.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+  
+    display: flex;
+    align-items: center;
+  }
+ 
+  .blue-btn{
+    border-radius: 0;
+    background: #2727a0;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+ }
+ 
+ .red-btn{
+    
+    border-radius: 0;
+    background: #d73d32;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+ }
+ .input-container {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.center-div{
+    display:flex;
+    position:absolute;
+    margin:auto;
+    left:0;
+    right:0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.bottom-0{ bottom:0;}
+.input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+}
+
+.input-field:focus {
+    border: 2px solid dodgerblue;
+}
+input[type=checkbox]{
+    vertical-align: text-bottom;
+}
+.icon {
+    padding: 15px;
+    background: white;
+    color: grey;
+    min-width: auto;
+    text-align: center;
+    font-size: 27px;
+}
+.table-icon .icon{
+    padding: 11px 6px 4px;
+    font-size: 27px;
+}
+/***************CSS for Data Tables****************/
+.dataTables_filter input[type="search"] { 
+    width:100%;
+    border-radius: 15px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1" id="spyglass" viewBox="0 0 22 22" height="22" width="22"><path d="m 10.011718,5.0898489 c -2.7000005,0 -4.9003915,2.2004 -4.9003915,4.9003996 0,2.6999995 2.200391,4.8983995 4.9003915,4.8983995 1.154374,0 2.204251,-0.4184 3.042969,-1.0898 l 3.207031,3.1113 0.626953,-0.6465 -3.185547,-3.0879 c 0.743242,-0.8594 1.208984,-1.964 1.208984,-3.1854995 0,-2.6999996 -2.20039,-4.9003996 -4.90039,-4.9003996 z m 0,1 c 2.2,0 3.90039,1.7004 3.90039,3.9003996 0,2.1999995 -1.70039,3.8983995 -3.90039,3.8983995 -2.2000005,0 -3.9003915,-1.6984 -3.9003915,-3.8983995 0,-2.1999996 1.700391,-3.9003996 3.9003915,-3.9003996 z" style="fill:#808080"/></svg>');
+    background-repeat: no-repeat;
+    background-color: #fff;
+    background-position: 1px -2px !important;
+    padding-left: 22px;
+    border: 1px solid #909090;
+ }
+ .dataTables_filter label{
+    width:100%;
+ }
+ .dataTable {border:1px solid #999;}
+ .dataTable tr th {font-weight: normal !important;font-size:12px;}
+ .odd td {background-color: #FFF  !important;}
+ .even td {background: #FFF !important;}
+/***************CSS for Data Tables****************/
+
+
+
+@media (max-width: 767px){
+    table.dataTable.nowrap th, table.dataTable.nowrap td{
+        white-space: normal !important;
+        font-size: 12px;
+    }
+    .dataTables_wrapper .dataTables_filter input {
+        margin-left: 0;
+        min-height: 28px;
+    }
+    .dataTables_filter label{
+        margin-bottom: 12px;
+    }
+    .dataTables_filter input[type="search"]{
+        background-position: 5px 2px !important;
+    }
+    
+}
