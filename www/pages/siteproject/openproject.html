@@ -13,9 +13,16 @@
         <link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
        
         <title>ISPEC</title>
+        <style>
+        div.dataTables_wrapper {
+        width: 100%;
+        margin: 0 auto;
+    }
+        </style>
     </head>
-    <body style="background:white" class="container">
-        <div class="row">
+    <body style="background:white">
+      <div class="mywrapper">
+            
             <div class="col-sm-12 col-xs-12 table-icon">
                 <a href="homepage.html">
                     <i class="fa fa-home icon"></i>
@@ -24,124 +31,177 @@
                     <i class="fa fa-sign-out icon"></i>
                 </a>
             </div>
-        </div>
-        <div class="col-sm-12 col-xs-12">
-            <table id="share_project_table" class="display responsive nowrap"  >
-					
-                <thead>
-                    <tr>
-                        <th>Door No.</th>
-                        <th>HW Set</th>
-                        <th>Door Type</th>
-                    </tr>
-                </thead>
-                <tbody id="static_table">
-                    <tr>
-                        <td>121</td>
-                        <td>A</td>
-                        <td>20</td>
-                    </tr><tr>
-                        <td>122</td>
-                        <td>B</td>
-                        <td>20</td>
-                    </tr><tr>
-                        <td>123</td>
-                        <td>C</td>
-                        <td>20</td>
-                    </tr><tr>
-                        <td>124</td>
-                        <td>A</td>
-                        <td>30</td>
-                    </tr><tr>
-                        <td>125</td>
-                        <td>A</td>
-                        <td>20</td>
-                    </tr><tr>
-                        <td>126</td>
-                        <td>A</td>
-                        <td>20</td>
-                    </tr><tr>
-                        <td>127</td>
-                        <td>A</td>
-                        <td>20</td>
-                    </tr><tr>
-                        <td>128</td>
-                        <td>A</td>
-                        <td>20</td>
-                    </tr><tr>
-                        <td>129</td>
-                        <td>A</td>
-                        <td>20</td>
-                    </tr><tr>
-                        <td>130</td>
-                        <td>A</td>
-                        <td>20</td>
-                    </tr><tr>
-                        <td>131</td>
-                        <td>A</td>
-                        <td>20</td>
-                    </tr><tr>
-                        <td>132</td>
-                        <td>A</td>
-                        <td>20</td>
-                    </tr><tr>
-                        <td>133</td>
-                        <td>A</td>
-                        <td>20</td>
-                    </tr><tr>
-                        <td>134</td>
-                        <td>A</td>
-                        <td>20</td>
-                    </tr><tr>
-                        <td>135</td>
-                        <td>A</td>
-                        <td>20</td>
-                    </tr><tr>
-                        <td>136</td>
-                        <td>A</td>
-                        <td>20</td>
-                    </tr><tr>
-                        <td>137</td>
-                        <td>A</td>
-                        <td>20</td>
-                    </tr><tr>
-                        <td>138</td>
-                        <td>A</td>
-                        <td>20</td>
-                    </tr><tr>
-                        <td>139</td>
-                        <td>A</td>
-                        <td>20</td>
-                    </tr><tr>
-                        <td>139</td>
-                        <td>A</td>
-                        <td>20</td>
-                    </tr><tr>
-                        <td>140</td>
-                        <td>A</td>
-                        <td>20</td>
-                    </tr><tr>
-                        <td>141</td>
-                        <td>A</td>
-                        <td>20</td>
-                    </tr><tr>
-                        <td>142</td>
-                        <td>A</td>
-                        <td>20</td>
-                    </tr><tr>
-                        <td>143</td>
-                        <td>A</td>
-                        <td>20</td>
-                    </tr><tr>
-                        <td>144</td>
-                        <td>A</td>
-                        <td>20</td>
-                    </tr>
-                </tbody>
-            </table>
-    </div>
+                 
+                <div class="col-sm-12 col-xs-12">
+                    <table id="share_project_table" class="display nowrap"style="width:100%" >
+                            
+                        <thead>
+                            <tr>
+                                <th>Door No.</th>
+                                <th>HW Set</th>
+                                <th>Door Type</th>
+                                <th>Level</th>
+                                <th>Location</th>
+                            </tr>
+                        </thead>
+                        <tbody id="static_table">
+                            <tr>
+                                <td>121</td>
+                                <td>A</td>
+                                <td>20</td>
+                                <td>Ground Floor</td>
+                                <td>Office</td>
+                            </tr><tr>
+                                <td>122</td>
+                                <td>B</td>
+                                <td>20</td>
+                                <td>Ground Floor</td>
+                                <td>Office</td>
+                            </tr><tr>
+                                <td>123</td>
+                                <td>C</td>
+                                <td>20</td>
+                                <td>Ground Floor</td>
+                                <td>Office</td>
+                            </tr><tr>
+                                <td>124</td>
+                                <td>A</td>
+                                <td>30</td>
+                                <td>Ground Floor</td>
+                                <td>Office</td>
+                            </tr><tr>
+                                <td>125</td>
+                                <td>A</td>
+                                <td>20</td>
+                                <td>Ground Floor</td>
+                                <td>Office</td>
+                            </tr><tr>
+                                <td>126</td>
+                                <td>A</td>
+                                <td>20</td>
+                                <td>Ground Floor</td>
+                                <td>Office</td>
+                            </tr><tr>
+                                <td>127</td>
+                                <td>A</td>
+                                <td>20</td>
+                                <td>Ground Floor</td>
+                                <td>Office</td>
+                            </tr><tr>
+                                <td>128</td>
+                                <td>A</td>
+                                <td>20</td>
+                                <td>Ground Floor</td>
+                                <td>Office</td>
+                            </tr><tr>
+                                <td>129</td>
+                                <td>A</td>
+                                <td>20</td>
+                                <td>Ground Floor</td>
+                                <td>Office</td>
+                            </tr><tr>
+                                <td>130</td>
+                                <td>A</td>
+                                <td>20</td>
+                                <td>Ground Floor</td>
+                                <td>Office</td>
+                            </tr><tr>
+                                <td>131</td>
+                                <td>A</td>
+                                <td>20</td>
+                                <td>Ground Floor</td>
+                                <td>Office</td>
+                            </tr><tr>
+                                <td>132</td>
+                                <td>A</td>
+                                <td>20</td>
+                                <td>Ground Floor</td>
+                                <td>Office</td>
+                            </tr><tr>
+                                <td>133</td>
+                                <td>A</td>
+                                <td>20</td>
+                                <td>Ground Floor</td>
+                                <td>Office</td>
+                            </tr><tr>
+                                <td>134</td>
+                                <td>A</td>
+                                <td>20</td>
+                                <td>Ground Floor</td>
+                                <td>Office</td>
+                            </tr><tr>
+                                <td>135</td>
+                                <td>A</td>
+                                <td>20</td>
+                                <td>Ground Floor</td>
+                                <td>Office</td>
+                            </tr><tr>
+                                <td>136</td>
+                                <td>A</td>
+                                <td>20</td>
+                                <td>Ground Floor</td>
+                                <td>Office</td>
+                            </tr><tr>
+                                <td>137</td>
+                                <td>A</td>
+                                <td>20</td>
+                                <td>Ground Floor</td>
+                                <td>Office</td>
+                            </tr><tr>
+                                <td>138</td>
+                                <td>A</td>
+                                <td>20</td>
+                                <td>Ground Floor</td>
+                                <td>Office</td>
+                            </tr><tr>
+                                <td>139</td>
+                                <td>A</td>
+                                <td>20</td>
+                                <td>Ground Floor</td>
+                                <td>Office</td>
+                            </tr><tr>
+                                <td>139</td>
+                                <td>A</td>
+                                <td>20</td>
+                                <td>Ground Floor</td>
+                                <td>Office</td>
+                            </tr><tr>
+                                <td>140</td>
+                                <td>A</td>
+                                <td>20</td>
+                                <td>Ground Floor</td>
+                                <td>Office</td>
+                            </tr><tr>
+                                <td>141</td>
+                                <td>A</td>
+                                <td>20</td>
+                                <td>Ground Floor</td>
+                                <td>Office</td>
+                            </tr><tr>
+                                <td>142</td>
+                                <td>A</td>
+                                <td>20</td>
+                                <td>Ground Floor</td>
+                                <td>Office</td>
+                            </tr><tr>
+                                <td>143</td>
+                                <td>A</td>
+                                <td>20</td>
+                                <td>Ground Floor</td>
+                                <td>Office</td>
+                            </tr><tr>
+                                <td>144</td>
+                                <td>A</td>
+                                <td>20</td>
+                                <td>Ground Floor</td>
+                                <td>Office</td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+      </div>
   
-    <div class=" center-div bottom-0" style="padding-right:0px;">
+    <div class=" center-div-noposition bottom-0" style="padding-right:0px;">
         <div class="col-md-4 col-sm-4  col-xs-4" style="width:45%">
             <div class="input-container"  >
                 <button type="button" id="open_project_back_btn" class="blue-btn" >Back</button>

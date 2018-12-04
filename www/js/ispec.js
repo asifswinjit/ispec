@@ -3,7 +3,8 @@ $(document).ready(function() {
         "bProcessing": true,
 		 "destroy": true,
 		 responsive: false,
-		"bLengthChange": false,
+        "bLengthChange": false,
+         //"scrollX": true,
        "bAutoWidth": true,
        "oLanguage": { "sSearch": "" } ,
     });  
