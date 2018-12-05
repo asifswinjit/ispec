@@ -102,8 +102,17 @@ $(document).ready(function() {
 } );
 
 $(document).ready(function(){
-    $("#camera").click(function(){
-        $("#file_upload").click()
+    // $("#camera").click(function(){
+    //     $("#file_upload").click()
+    // });
+    
+    // Remove Image
+    $("#remove_image").click(function(){
+         
+        $('#pic_upload').attr('src', "../images/blank.png ");
+  
+        $('#pic_upload').hide();
+        $('#pic_upload').fadeIn(300);
     });
 
     $("#file_upload").change(function() {

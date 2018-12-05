@@ -27,7 +27,16 @@ var app = {
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
-        this.receivedEvent('deviceready');
+        //this.receivedEvent('deviceready');
+        document.getElementById("camera").onclick = function(){
+            navigator.camera.getPicture(function(imageUri){
+               // alert("Looking Good "+imageUri)
+                $('#pic_upload').attr('src', imageUri);
+  
+                $('#pic_upload').hide();
+                $('#pic_upload').fadeIn(300);
+            },null,null);
+        };
     },
 
     // Update DOM on a Received Event

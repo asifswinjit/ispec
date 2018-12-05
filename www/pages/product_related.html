@@ -60,7 +60,7 @@
                                         <input type='file' id="file_upload"  style="display:none" accept="image/*;capture=camera"/>
                                         <label>Pictures</label>
                                         <span id="camera"><i class="fa fa-camera" aria-hidden="true"></i></span>
-                                        <span class="pull-right"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+                                        <span id="remove_image" class="pull-right"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
                                         <div class="col-md-12 col-sm-12 col-xs-12" style="border:1px solid #333;height:200px;overflow: hidden;" id='img_contain'>
                                             <img id="pic_upload" align='middle' src="../images/blank.png" alt="your image" title=''/>
                                         </div>
@@ -84,7 +84,7 @@
                 </div>
             </div>
         </div>
-
+        <script src="../cordova.js"></script>
     <script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
     <script type="text/javascript" src="../js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="../js/dataTables.responsive.min.js"></script>

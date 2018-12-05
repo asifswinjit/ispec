@@ -18,6 +18,9 @@
         width: 100%;
         margin: 0 auto;
     }
+    #share_project_table_wrapper{
+        overflow-x: scroll;
+    }
         </style>
     </head>
     <body style="background:white">
@@ -33,7 +36,7 @@
             </div>
                  
                 <div class="col-sm-12 col-xs-12">
-                    <table id="share_project_table" class="display nowrap"style="width:100%" >
+                    <table id="share_project_table" class="display nowrap border-table" style="width:100%;overflow-x:scroll;" >
                             
                         <thead>
                             <tr>
@@ -201,7 +204,7 @@
             </div>
       </div>
   
-    <div class=" center-div-noposition bottom-0" style="padding-right:0px;">
+    <div class=" center-div-noposition bottom-0" style="padding-right:0px;padding-top:15px;">
         <div class="col-md-4 col-sm-4  col-xs-4" style="width:45%">
             <div class="input-container"  >
                 <button type="button" id="open_project_back_btn" class="blue-btn" >Back</button>
@@ -209,7 +212,7 @@
         </div>
         <div class="col-md-4 col-sm-4  col-xs-4" style="width:45%;float: right;right: 0px;margin: auto;">
             <div class="input-container"  >
-                <button type="button" id="proj_comment_btn" class="red-btn" >Project Comments</button>
+                <button type="button" id="proj_comment_btn" class="red-btn" >Comments</button>
             </div>
         </div>
     </div>
